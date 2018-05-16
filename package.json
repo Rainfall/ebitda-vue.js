@@ -1,0 +1,9 @@
+{
+  "name": "EBITDA",
+  "version": "0.0.1",
+  "dependencies": {
+    "Vue": "latest",
+    "hoek": "^5.0.3",
+    "vue": "^2.5.16"
+  }
+}

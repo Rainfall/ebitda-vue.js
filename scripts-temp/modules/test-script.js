@@ -1,8 +1,20 @@
 import jQuery from 'jquery';
+import Vue from 'vue/dist/vue.js';
 
 function TestScript () {
 
-  console.log('piu3');
+  console.log('piu8');
+  new Vue({
+      el: '#app',
+      data: {
+          test: 'Hello, world...',
+      },
+      methods: {
+          test2() {
+              console.log('Hi there');
+          }
+      }
+  })
   
 }
 
