@@ -5,26 +5,25 @@ var gulp = require("gulp"),
 gulp.task('watch', function () {
 
 	browserSync.init({
-		open: 'external',
-	    host: 'localhost',
-	    proxy: 'localhost',
-	    port: 81,
-	    files: '/exo/src',
+        server: {
+            baseDir: "./",
+            directory: true
+        },
 	    injectChanges: true
 	});
 
-	watch('./src/**/*html', function() {
+	watch('./**/*html', function() {
 		browserSync.reload();
 	});
 
 
-	watch('./src/scss/**/*.scss', function() {
+	watch('./scss/**/*.scss', function() {
 	     gulp.start('cssLoad');
 	});
 
-	watch('./src/scripts-temp/**/*.js', function() {
-		gulp.start('scriptsRefresh');
-	});
+	// watch('./src/scripts-temp/**/*.js', function() {
+	// 	gulp.start('scriptsRefresh');
+	// });
 
 });
 
@@ -32,6 +31,6 @@ gulp.task('cssLoad', ['scss'], function() {
 	browserSync.reload();
 });
 
-gulp.task('scriptsRefresh', ['scripts'], function() {
-	browserSync.reload();
-});
+// gulp.task('scriptsRefresh', ['scripts'], function() {
+// 	browserSync.reload();
+// });
