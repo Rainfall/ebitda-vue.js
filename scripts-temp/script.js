@@ -1,1 +1,1 @@
-import TestScript from './modules/test-script.js';
+import Main from './modules/main.js';
