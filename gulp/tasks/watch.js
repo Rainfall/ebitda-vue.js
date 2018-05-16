@@ -21,9 +21,9 @@ gulp.task('watch', function () {
 	     gulp.start('cssLoad');
 	});
 
-	// watch('./src/scripts-temp/**/*.js', function() {
-	// 	gulp.start('scriptsRefresh');
-	// });
+	watch('./scripts-temp/**/*.js', function() {
+		gulp.start('scriptsRefresh');
+	});
 
 });
 
@@ -31,6 +31,6 @@ gulp.task('cssLoad', ['scss'], function() {
 	browserSync.reload();
 });
 
-// gulp.task('scriptsRefresh', ['scripts'], function() {
-// 	browserSync.reload();
-// });
+gulp.task('scriptsRefresh', ['scripts'], function() {
+	browserSync.reload();
+});
